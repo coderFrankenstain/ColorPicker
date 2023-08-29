@@ -1,16 +1,5 @@
 import React, { useState } from "react";
 
-function Gap() {
-  return (
-    <span
-      style={{
-        display: "inline-block",
-        width: "60px",
-      }}
-    ></span>
-  );
-}
-
 function ColorSetter() {
   const [r, setR] = useState(255);
   const [g, setG] = useState(255);
@@ -24,6 +13,10 @@ function ColorSetter() {
     }
   };
 
+  const itemStyle = {
+    marginBottom: "20px", // 设置每个子项的底部间隔为20px
+  };
+
   const colorStyle = {
     backgroundColor: `rgb(${r}, ${g}, ${b})`,
     width: "500px",
@@ -35,56 +28,64 @@ function ColorSetter() {
   return (
     <div style={{ textAlign: "center" }}>
       <div style={colorStyle}></div>
-      <div>
+      <div style={itemStyle}>
         <label>R: </label>
         <input
           type="number"
           value={r}
           onChange={(e) => handleInputChange(e, setR)}
         />
-        {Gap()}
-        <label>R: </label>
-        <input
-          type="range"
-          min="0"
-          max="255"
-          value={r}
-          onChange={(e) => setR(e.target.value)}
-        />
       </div>
-      <div>
+      <div style={itemStyle}>
         <label>G: </label>
         <input
           type="number"
           value={g}
           onChange={(e) => handleInputChange(e, setG)}
         />
-        {Gap()}
-        <label>G: </label>
-        <input
-          type="range"
-          min="0"
-          max="255"
-          value={g}
-          onChange={(e) => setG(e.target.value)}
-        />
       </div>
-      <div>
+      <div style={itemStyle}>
         <label>B: </label>
         <input
           type="number"
           value={b}
           onChange={(e) => handleInputChange(e, setB)}
         />
-        {Gap()}
-        <label>B: </label>
-        <input
-          type="range"
-          min="0"
-          max="255"
-          value={b}
-          onChange={(e) => setB(e.target.value)}
-        />
+      </div>
+      <div style={{ marginTop: "30px" }}>
+        <div style={itemStyle}>
+          <label>R: </label>
+          <input
+            style={{ width: "300px" }}
+            type="range"
+            min="0"
+            max="255"
+            value={r}
+            onChange={(e) => setR(e.target.value)}
+          />
+        </div>
+        <div style={itemStyle}>
+          <label>G: </label>
+          <input
+            style={{ width: "300px" }}
+            type="range"
+            min="0"
+            max="255"
+            value={g}
+            onChange={(e) => setG(e.target.value)}
+          />
+        </div>
+        <div style={itemStyle}>
+          <label>B: </label>
+          <input
+            style={{ width: "300px" }}
+            type="range"
+            min="0"
+            max="255"
+            value={b}
+            onChange={(e) => setB(e.target.value)}
+          />
+        </div>
       </div>
     </div>
   );
