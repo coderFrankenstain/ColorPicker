@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Image from "next/image";
 function ColorSetter() {
   const [r, setR] = useState(255);
   const [g, setG] = useState(255);
@@ -35,8 +35,6 @@ function ColorSetter() {
   };
 
   const backgroundStyle = {
-    backgroundImage: "url(/bg.png)",
-    backgroundSize: "cover",
     width: "800px",
     height: "60px",
     position: "absolute",
@@ -80,7 +78,13 @@ function ColorSetter() {
     <div style={{ textAlign: "center" }}>
       <div style={colorPanelStyle}>
         <div style={colorStyle}></div>
-        <div style={backgroundStyle}></div>
+        <Image
+          src={"/bg.png"}
+          width={700}
+          height={70}
+          alt="logo"
+          style={backgroundStyle}
+        ></Image>
       </div>
       <div style={itemStyle}>
         <label style={redLabelStyle}>红色: </label>
