@@ -78,13 +78,13 @@ function ColorSetter() {
     <div style={{ textAlign: "center" }}>
       <div style={colorPanelStyle}>
         <div style={colorStyle}></div>
-        <Image
-          src={"/bg.png"}
-          width={700}
-          height={70}
-          alt="logo"
+        <img
+          src="/bg.png"
+          alt="Background"
+          width="700"
+          height="70"
           style={backgroundStyle}
-        ></Image>
+        />
       </div>
       <div style={itemStyle}>
         <label style={redLabelStyle}>红色: </label>
