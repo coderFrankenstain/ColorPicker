@@ -4,7 +4,7 @@ import ColorSetter from "./components/ColorSetter";
 function App() {
   return (
     <div className="App">
-      <h1>RGB 颜色设置器</h1>
+      <h1>灯光合成</h1>
       <ColorSetter />
     </div>
   );

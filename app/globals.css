@@ -6,3 +6,16 @@
   padding: 6rem;
   max-height: 100vh;
 }
+
+/* 在您的CSS文件或样式标签中添加以下代码 */
+/* input[type="range"]::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+input[type="range"]::-moz-range-track {
+  background: currentColor;
+}
+
+input[type="range"]::-ms-track {
+  background: currentColor;
+} */
