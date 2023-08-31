@@ -49,14 +49,17 @@ function ColorSetter() {
 
   const redLabelStyle = {
     color: `red`,
+    fontSize: "25px",
   };
 
   const greenLabelStyle = {
     color: `green`,
+    fontSize: "25px",
   };
 
   const blueLabelStyle = {
     color: `blue`,
+    fontSize: "25px",
   };
 
   const redSliderStyle = {
@@ -73,6 +76,8 @@ function ColorSetter() {
     ...sliderCommonStyle,
     // color: `blue`, // 添加这一行
   };
+
+  const inputStyle = { fontSize: "25px", width: "90px" };
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -100,6 +105,7 @@ function ColorSetter() {
         <input
           type="number"
           value={r}
+          style={inputStyle}
           onChange={(e) => handleInputChange(e, setR)}
         />
       </div>
@@ -114,6 +120,7 @@ function ColorSetter() {
           onChange={(e) => setG(e.target.value)}
         />
         <input
+          style={inputStyle}
           type="number"
           value={g}
           onChange={(e) => handleInputChange(e, setG)}
@@ -130,6 +137,7 @@ function ColorSetter() {
           onChange={(e) => setB(e.target.value)}
         />
         <input
+          style={inputStyle}
           type="number"
           value={b}
           onChange={(e) => handleInputChange(e, setB)}
