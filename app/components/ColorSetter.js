@@ -14,16 +14,17 @@ function ColorSetter() {
   };
 
   const itemStyle = {
-    marginBottom: "20px", // 设置每个子项的底部间隔为20px
+    marginBottom: "30px", // 设置每个子项的底部间隔为20px
   };
 
   const colorStyle = {
     backgroundColor: `rgb(${r}, ${g}, ${b})`,
-    width: "665px",
-    height: "42px",
+    width: "573px",
+    height: "66px",
     position: "absolute", // 添加这一行
-    top: 10,
-    left: 78,
+    top: -4,
+    left: 99,
+    zIndex: 3,
   };
 
   const colorPanelStyle = {
@@ -31,16 +32,17 @@ function ColorSetter() {
     position: "relative",
     height: "70px",
     margin: "20px auto",
+    marginBottom: "60px",
     width: "700px",
   };
 
   const backgroundStyle = {
     width: "800px",
-    height: "60px",
+    height: "104px",
     position: "absolute",
-    top: 0, // 添加这一行
-    left: 0, // 添加这一行// 使其与 colorStyle div 重叠
-    zIndex: -1, // 使其位于 colorStyle div 下方
+    top: -30, // 添加这一行
+    left: -22, // 添加这一行// 使其与 colorStyle div 重叠
+    zIndex: 2, // 使其位于 colorStyle div 下方
   };
 
   const sliderCommonStyle = {
